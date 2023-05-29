@@ -11,11 +11,12 @@ import java.sql.*;
 public class ConnectionModule {
     public static Connection Conector(){
     Connection connection = null;
+     //the path for the driver in the lib, in this app it was used the one below
     String driver = "com.mysql.cj.jdbc.Driver";
-    
+    //where the data base is installed, in my case it was in my own machine 
     String url = "jdbc:mysql://localhost:3306/dbinfox";
     String user = "root";
-    String password = "FlF03052002";
+    String password = "";
     
     try {
      Class.forName(driver);
