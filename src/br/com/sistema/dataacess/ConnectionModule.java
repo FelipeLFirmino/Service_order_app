@@ -16,7 +16,7 @@ public class ConnectionModule {
     String url = "jdbc:mysql://localhost:3306/dbinfox";
     String user = "root";
     String password = "FlF03052002";
-    
+    //
     try {
      Class.forName(driver);
      connection = DriverManager.getConnection(url,user,password);
