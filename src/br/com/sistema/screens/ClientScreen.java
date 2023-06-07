@@ -6,6 +6,7 @@ package br.com.sistema.screens;
 
 import java.sql.*;
 import br.com.sistema.dataacess.ConnectionModule;
+import br.com.sistema.interfaces.ScreenInterfaces;
 import javax.swing.JOptionPane;
 import javax.swing.table.DefaultTableModel;
 import net.proteanit.sql.DbUtils;
@@ -14,7 +15,7 @@ import net.proteanit.sql.DbUtils;
  *
  * @author Felipe Firmino
  */
-public class ClientScreen extends javax.swing.JInternalFrame {
+public class ClientScreen extends javax.swing.JInternalFrame implements ScreenInterfaces{
 
     Connection connection = null;
     PreparedStatement pstatement = null;
@@ -147,7 +148,7 @@ public class ClientScreen extends javax.swing.JInternalFrame {
         }
     }
 
-    private void cleanpage() {
+    public void cleanpage() {
         textfield_idclient.setText(null);
         textfield_clientname.setText(null);
         textfield_clientadress.setText(null);
